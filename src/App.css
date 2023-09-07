@@ -1,0 +1,57 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    background-color: antiquewhite;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Header */
+
+header {
+    height: 5em;
+    width: 100%;
+    background-color: transparent;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+    padding: 1em 0;
+}
+
+.logo {
+    height: 5em;
+}
+
+.logo img {
+    height: 5em;
+}
+
+.navbar-lista {
+    display: flex;
+    gap: 1em;
+}

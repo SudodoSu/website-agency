@@ -14,6 +14,22 @@
     font-family: Poppins900;
     src: url(./assets/fonts/Poppins-Black.ttf);
 }
+@font-face {
+    font-family: SourceSansPro400;
+    src: url(./assets/fonts/source-sans-pro/SourceSansPro-Regular.otf);
+}
+@font-face {
+    font-family: SourceSansPro600;
+    src: url(./assets/fonts/source-sans-pro/SourceSansPro-Semibold.otf);
+}
+@font-face {
+    font-family: SourceSansPro700;
+    src: url(./assets/fonts/source-sans-pro/SourceSansPro-Bold.otf);
+}
+@font-face {
+    font-family: SourceSansPro900;
+    src: url(./assets/fonts/source-sans-pro/SourceSansPro-Black.otf);
+}
 
 :root {
     /* Plate */
@@ -53,7 +69,7 @@ img {
 
 body {
     font-family: Poppins400, sans-serif;
-    background-color: antiquewhite;
+    background-color: var(--white);
 }
 
 /* Header */
@@ -68,7 +84,7 @@ header {
 
 .navbar {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     height: 100%;
     padding: 1em 0;
 }
@@ -115,14 +131,19 @@ header {
 .section-one {
     background: url(./assets/images/bg6.png), url(./assets/images/bg5.png), var(--gradient);
     background-repeat: no-repeat;
-    background-position: bottom;
+    background-size: cover;
+    background-position: top right;
     height: 950px;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .section-one:after {
     content: "";
     background-image: url(./assets/images/section-one-white-background.png);
+    background-size: contain;
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -131,4 +152,60 @@ header {
     background-repeat: no-repeat;
     background-position: bottom;
     z-index: 0;
+}
+
+.section-one-title {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.section-one-title > h1 {
+    font-family: SourceSansPro700, sans-serif;
+    font-size: 3.8em;
+    color: var(--white);   
+}
+
+.section-one-title > p {
+    color: var(--white);
+    font-family: Poppins400, sans-serif;
+}
+
+.section-one-compimg {
+    z-index: 1;
+    position: relative;
+    left: 5em;
+    transform: scale(1.5);
+}
+
+.max-width {
+    max-width: 1200px;
+}
+
+.flex {
+    display: flex;
+}
+
+.section-one-title > button {
+    max-width: 12em;
+    padding: .7em 1em;
+    background-image: linear-gradient(to right, var(--dark_blue), var(--blue));
+    border-radius: 0 30px;
+    color: var(--white);
+    font-size: 1.2em;
+    font-family: Poppins400;
+}
+
+
+/* Section Two */
+
+.section-two {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5em 0;
+}
+
+.our-speciallization-articles {
+    display: flex;
 }

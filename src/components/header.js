@@ -10,12 +10,11 @@ function Header() {
                   <img src={Logo} alt="logo boost web"/>
                 </a>
               </div>
-              
               <ul className="navbar-lista">
                 <li><a>Početna</a></li>
                 <li><a>Zašto Mi</a></li>
                 <li><a>Reference</a></li>
-                <li><button type="button">Besplatne Konzultacije <span>zakaži odmah</span></button></li>
+                <li className="button-class"><button type="button">Besplatne Konzultacije <span>zakaži odmah</span></button></li>
               </ul>
             </nav>
         </header>

@@ -1,5 +1,5 @@
 import "../App.css";
-import CompImg from "../assets/images/section-one-rotate.png";
+import CompImg from "../assets/images/section-one-rotate-2.png";
 
 function SectionOne() {
     return (

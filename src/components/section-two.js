@@ -4,26 +4,22 @@ import WebDevelopment from "../assets/images/webdevelopment.png";
 import WebSolutions from "../assets/images/web-solutions.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import { useState, useRef } from "react";
+import { useRef } from "react";
 
 
 function SectionTwo() {
 
-    // const [article, articleChange] = useState(false);
-    const [count, countChange] = useState(3);
-    const currentArticle = useRef(null);
-    console.log(currentArticle.current)
+    const currentArticle = [useRef(null), useRef(null), useRef(null)];
 
     function background(e) {
-        countChange(e);
-        if(currentArticle.current){
-            currentArticle.current.style.background = "var(--gradient2)";
+        if(currentArticle[e].current){
+            currentArticle[e].current.style.background = "var(--gradient2)";
         }
     }
 
-    function backgroundOut() {
-        if(currentArticle.current){
-            currentArticle.current.style.background = "transparent";
+    function backgroundOut(e) {
+        if(currentArticle[e].current){
+            currentArticle[e].current.style.background = "transparent";
         }
         
     }
@@ -36,7 +32,7 @@ function SectionTwo() {
                         <div className="section-two-line"></div>
                     </div>
                     <div className="our-speciallization-articles">
-                        <article onMouseOver={() => background(1)} onMouseLeave={backgroundOut}>
+                        <article onMouseOver={() => background(0)} onMouseLeave={() => backgroundOut(0)}>
                             <div className="our-speciallization-articles-image">
                                 <img src={Research}/>
                             </div>
@@ -44,10 +40,10 @@ function SectionTwo() {
                                 <h2>Strategija & Istraživanje</h2>
                                 <p>Naša web dizajn agencija temelji se na vrhunskoj strategiji i 
                                     dubokom istraživanju kako bismo stvarali web stranice koje ostavljaju snažan utisak.</p>
-                                <button ref={currentArticle}><FontAwesomeIcon icon={faArrowRight} style={{color: "#112d4e",}} /></button>
+                                <button ref={currentArticle[0]}><FontAwesomeIcon icon={faArrowRight} style={{color: "#112d4e",}} /></button>
                             </div>
                         </article>
-                        <article onMouseOver={() => background(2)} onMouseLeave={backgroundOut}>
+                        <article onMouseOver={() => background(1)} onMouseLeave={() => backgroundOut(1)}>
                             <div className="our-speciallization-articles-image">
                                 <img src={WebDevelopment}/>
                             </div>
@@ -55,10 +51,10 @@ function SectionTwo() {
                                 <h2>Web Development</h2>
                                 <p>Bavimo se web developmentom s fokusom na performanse i 
                                     korisničko iskustvo kako bismo stvorili web stranice koje zadovoljavaju najviše standarde i ciljeve naših klijenata.</p>
-                                <button ref={currentArticle}><FontAwesomeIcon icon={faArrowRight} style={{color: "#112d4e",}} /></button>
+                                <button ref={currentArticle[1]}><FontAwesomeIcon icon={faArrowRight} style={{color: "#112d4e",}} /></button>
                             </div>
                         </article>
-                        <article onMouseOver={() => background(3)} onMouseLeave={backgroundOut}>
+                        <article onMouseOver={() => background(2)} onMouseLeave={() => backgroundOut(2)}>
                             <div className="our-speciallization-articles-image">
                                 <img src={WebSolutions}/>
                             </div>
@@ -66,7 +62,7 @@ function SectionTwo() {
                                 <h2>Web Rješenja</h2>
                                 <p>S našim web rješenjima, vaša online prisutnost će se transformirati, 
                                     pružajući vam konkurentske prednosti i bolju interakciju s vašim korisnicima.</p>
-                                <button ref={currentArticle}><FontAwesomeIcon icon={faArrowRight} style={{color: "#112d4e",}} /></button>
+                                <button ref={currentArticle[2]}><FontAwesomeIcon icon={faArrowRight} style={{color: "#112d4e",}} /></button>
                             </div>
                         </article>
                     </div> 

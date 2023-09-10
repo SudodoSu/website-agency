@@ -41,6 +41,9 @@
     /* Gradiant */
     --gradient: linear-gradient(90deg,  #112D4E, #3F72AF, #112D4E);
     --gradient2: linear-gradient(90deg,#d62828, #fb8500, #ffb703);
+
+    /* Shadow */
+    --shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 *,
@@ -68,6 +71,11 @@ img {
     height: auto;
 }
 
+p {
+    color: var(--blue);
+    line-height: 1.7;
+}
+
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
     font-family: Source Sans Pro,sans-serif;
     font-weight: 700;
@@ -84,11 +92,19 @@ body {
 /* Header */
 
 header {
-    height: 5em;
+    height: 7em;
     width: 100%;
     background-color: transparent;
     position: fixed;
     z-index: 5;
+    transition: all 0.3s;
+}
+
+header.scrolled {
+    background-color: var(--white);
+    height: 5.4em;
+    box-shadow: var(--shadow);
+    transition: all 0.3s;
 }
 
 .navbar {
@@ -96,6 +112,12 @@ header {
     justify-content: space-evenly;
     height: 100%;
     padding: 1em 0;
+    transition: all 0.5s;
+}
+
+.navbar.scrolled {
+    padding: .2em 0;
+    transition: all 0.5s;
 }
 
 .logo {
@@ -120,6 +142,10 @@ header {
     cursor: pointer;
 }
 
+.navbar-lista > li > a.scrolled {
+    color: var(--dark_blue);
+}
+
 .button-class > button {
     padding: .5em 1em;
     font-family: Poppins600, sans-serif;
@@ -129,11 +155,17 @@ header {
     border-radius: 0px 30px;
     cursor: pointer;
     border: none;
+    transition: border-radius 0.5s;
 }
 
 .button-class > button > span {
     font-family: Poppins400, sans-serif;
     font-size: .8em
+}
+
+.button-class > button:hover {
+    border-radius: 30px 0;
+    transition: all 0.5s;
 }
 
 /* Section One */
@@ -184,7 +216,6 @@ header {
 .section-one-compimg {
     z-index: 1;
     position: relative;
-    transform: scale(2.8);
     align-self: flex-end;
 }
 
@@ -194,7 +225,10 @@ header {
 
 .flex {
     display: flex;
-    gap: 15%;
+}
+
+.flex > * {
+    width: 50%;
 }
 
 .section-one-title > button {
@@ -208,6 +242,11 @@ header {
     border: none;
     cursor: pointer;
     z-index: 1;
+    transition: border-radius 0.5s;
+}
+.section-one-title > button:hover {
+    border-radius: 30px 0;
+    transition: all 0.5s;
 }
 
 
@@ -222,7 +261,7 @@ header {
 
 .section-two-title {
     text-align: center;
-    font-size: 2.2em;
+    font-size: 2em;
     font-family: SourceSansPro700, sans-serif;
     color: var(--dark_blue);
 }
@@ -278,7 +317,7 @@ header {
 }
 
 .our-speciallization-articles > article:hover {
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: var(--shadow);
     transition: box-shadow 0.5s;
 }
 
@@ -309,7 +348,123 @@ header {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
+.our-speciallization-articles-title > button:hover {
+    
+}
+
 .our-speciallization-articles-title > h2 {
     font-family: SourceSansPro700;
     font-size: 2em;
+}
+
+/* Section Three */
+
+.section-three {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10em 0;
+}
+
+.section-three-right {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    justify-content: center;
+}
+
+.section-three-title > h1 {
+    font-size: 3em;
+    font-family: SourceSansPro700, sans-serif;
+    color: var(--dark_blue);
+}
+
+.section-three-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.section-three-text > button {
+    max-width: 15em;
+    padding: 0.7em 1em;
+    background-image: var(--gradient2);
+    border-radius: 0 30px;
+    color: var(--white);
+    font-size: 1.2em;
+    font-family: Poppins600, sans-serif;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    transition: border-radius 0.5s;
+}
+.section-three-text > button:hover {
+    border-radius: 30px 0;
+    transition: all 0.5s;
+}
+
+/* Section Four */
+
+.section-four {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10em 0;
+}
+
+.section-four-title {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.section-four-title > h1 {
+    font-size: 3em;
+    font-family: SourceSansPro700, sans-serif;
+    color: var(--dark_blue);
+}
+
+.section-four-bottom {
+    display: flex;
+    gap: 1em;
+}
+
+.section-four-article-image {
+    width: 80px;
+    height: 80px;
+    background-image: var(--gradient);
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 80px;
+}
+
+.section-four-inner-articles {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    flex: 1;
+}
+
+.section-four-inner-articles > article {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+.section-four-article-text {
+    flex: 1 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.section-four-article-text > h2 {
+    color: var(--dark_blue);
+    font-size: 1.5em;
+}
+
+.section-four-image {
+    flex: 1;
 }

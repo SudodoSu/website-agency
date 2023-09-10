@@ -8,9 +8,7 @@ import { useRef } from "react";
 
 
 function SectionTwo() {
-
     const currentArticle = [useRef(null), useRef(null), useRef(null)];
-
     function background(e) {
         if(currentArticle[e].current){
             currentArticle[e].current.style.background = "var(--gradient2)";

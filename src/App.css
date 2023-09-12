@@ -259,6 +259,8 @@ header.scrolled {
     margin: 5em 0;
 }
 
+
+
 .section-two-title {
     text-align: center;
     font-size: 2em;
@@ -311,15 +313,17 @@ header.scrolled {
     display: flex;
     flex-direction: column;
     gap: 2em;
-    background-color: var(--white);
     border-radius: 5px;
     padding: 4em 2em 2em 2em;
+    transition: transform 0.5s;
 }
 
-.our-speciallization-articles > article:hover {
+.our-speciallization-articles > article.growArticle {
+    transform: scale(1.02);
+    transition: transform 1s, box-shadow 0.5s;
     box-shadow: var(--shadow);
-    transition: box-shadow 0.5s;
 }
+
 
 .our-speciallization-articles-title {
     text-align: center;
@@ -348,8 +352,8 @@ header.scrolled {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.our-speciallization-articles-title > button:hover {
-    
+.our-speciallization-articles-title > button.backgroundHover {
+    background-image: var(--gradient2);
 }
 
 .our-speciallization-articles-title > h2 {
@@ -467,4 +471,25 @@ header.scrolled {
 
 .section-four-image {
     flex: 1;
+}
+
+.iconAnimation {
+    display: block;
+    animation: animation 0.5s;
+}
+
+@keyframes animation{
+    0%, 100% {
+        display: block;
+        transform: translate(0);
+    }
+    33% {
+        transform: translateY(-5em);
+        display: none;
+    }
+
+    66% {
+        display: none;
+        transform: translateY(10em);
+    }
 }

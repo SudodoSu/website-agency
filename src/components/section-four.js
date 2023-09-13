@@ -2,7 +2,7 @@ import "../App.css";
 import OurServices from "../assets/images/section-four.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeadSideVirus, faPenNib, faCode, faRocket, prefix } from '@fortawesome/free-solid-svg-icons';
-import { useState, useRef } from "react";
+import { useState } from "react";
 
 
 function SectionFour() {

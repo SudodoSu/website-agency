@@ -35,11 +35,12 @@
     /* Plate */
     --white: #F9F7F7;
     --grey: #DBE2EF;
-    --blue: #3F72AF;
-    --dark_blue: #112D4E;
+    --blue: #3f72af;
+    --dark_blue: #112d4e;
 
     /* Gradiant */
     --gradient: linear-gradient(90deg,  #112D4E, #3F72AF, #112D4E);
+    --gradient3: linear-gradient(to left,  #112D4E, #3F72AF);
     --gradient2: linear-gradient(90deg,#d62828, #fb8500, #ffb703);
 
     /* Shadow */
@@ -318,7 +319,8 @@ header.scrolled {
     transition: transform 0.5s, box-shadow 0.5s;
 }
 
-.our-speciallization-articles > article.growArticle {
+.our-speciallization-articles > article.growArticle,
+.pricing-article.growArticle {
     transform: scale(1.02);
     transition: transform 1s, box-shadow 0.5s;
     box-shadow: var(--shadow);
@@ -436,12 +438,13 @@ header.scrolled {
 .section-four-article-image {
     width: 80px;
     height: 80px;
-    background-image: var(--gradient);
+    background-image: var(--gradient3);
     border-radius: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-basis: 80px;
+    box-shadow: 0 2px 15px rgba(63, 113, 175, 0.712);
 }
 
 .section-four-inner-articles {
@@ -496,11 +499,79 @@ header.scrolled {
 
 /* Pricing Section */
 
-.pricing-section {
+.pricing {
     display: flex;
+    justify-content: center;
+    margin-bottom: 5em;
+}
 
+.pricing-title {
+    text-align: center;
+    display: flex;
+    gap: 1em;
+    margin-bottom: 3em;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pricing-title > h1 {
+    font-size: 3em;
+    color: var(--dark_blue);
 }
 
 .pricing-section {
+    display: flex;
+    gap: 2em;
+}
 
+.pricing-article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    box-shadow: var(--shadow);
+    padding: 3em;
+    flex: 1 1 350px;
+    border-radius: 10px;
+    transition: transform 0.5s;
+}
+
+.pricing-description {
+    display: flex;
+    flex-direction: column;
+    gap: .6em;
+    margin-bottom: 1em;
+}
+
+.pricing-description > li {
+    display: flex;
+    gap: .5em;
+}
+
+.pricing-button {
+    font-family: Poppins400, sans-serif;   
+    font-size: 1em;
+    cursor: pointer;
+    background-image: var(--gradient2);
+    color: var(--white);
+    border-radius: 0 20px;
+    padding: .8em 2.5em;
+    transition: border-radius .5s;
+}
+
+.pricing-button:hover {
+    border-radius: 20px  0;
+    transition: border-radius .5s;
+}
+
+.plan-title {
+    font-size: 1.5em;
+    color: var(--dark-blue);
+    text-align: center;
+}
+
+.pricing-plan-price > h2 {
+    color: #d62828;
+    font-size: 2.5em;
 }

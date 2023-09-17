@@ -37,7 +37,9 @@
     --grey: #DBE2EF;
     --blue: #3f72af;
     --dark_blue: #112d4e;
-
+    --red: #d62828;
+    --orange: #fb8500;
+    --yellow: #ffb703;
     /* Gradiant */
     --gradient: linear-gradient(90deg,  #112D4E, #3F72AF, #112D4E);
     --gradient3: linear-gradient(to left,  #112D4E, #3F72AF);
@@ -84,6 +86,7 @@ p {
 
 button {
     border: none;
+    background-color: transparent;
 }
 
 body {
@@ -217,7 +220,18 @@ header.scrolled {
 .section-one-compimg {
     z-index: 1;
     position: relative;
-    align-self: flex-end;
+    transform: translate(1em, 1em);
+    left: 5em;
+    animation: image_animation 4s linear infinite;
+}
+
+@keyframes image_animation {
+    0%, 100% {
+        transform: rotate(0);
+    }
+    50% {
+        transform: rotate(-3deg);
+    }
 }
 
 .max-width {
@@ -257,7 +271,8 @@ header.scrolled {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 5em 0;
+    padding-bottom: 10em;
+    padding-top: 7em;
 }
 
 
@@ -319,8 +334,7 @@ header.scrolled {
     transition: transform 0.5s, box-shadow 0.5s;
 }
 
-.our-speciallization-articles > article.growArticle,
-.pricing-article.growArticle {
+.our-speciallization-articles > article.growArticle {
     transform: scale(1.02);
     transition: transform 1s, box-shadow 0.5s;
     box-shadow: var(--shadow);
@@ -369,7 +383,7 @@ header.scrolled {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 10em 0;
+    padding-bottom: 15em;
 }
 
 .section-three-right {
@@ -416,7 +430,7 @@ header.scrolled {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 10em 0;
+    padding-bottom: 15em;
 }
 
 .section-four-title {
@@ -500,9 +514,12 @@ header.scrolled {
 /* Pricing Section */
 
 .pricing {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 5em;
+    display: block;
+    padding-bottom: 10em;
+}
+
+.pricing > div {
+    margin: auto;
 }
 
 .pricing-title {
@@ -520,6 +537,7 @@ header.scrolled {
 }
 
 .pricing-section {
+    margin: auto;
     display: flex;
     gap: 2em;
 }
@@ -534,7 +552,10 @@ header.scrolled {
     padding: 3em;
     flex: 1 1 350px;
     border-radius: 10px;
-    transition: transform 0.5s;
+}
+
+.pricing-article.hovered {
+    background-image: var(--gradient2);
 }
 
 .pricing-description {
@@ -547,31 +568,143 @@ header.scrolled {
 .pricing-description > li {
     display: flex;
     gap: .5em;
+    font-family: Poppins400, sans-serif;
+}
+
+.pricing-description.hovered > li {
+    color: var(--white);
 }
 
 .pricing-button {
-    font-family: Poppins400, sans-serif;   
+    font-family: Poppins600, sans-serif;   
     font-size: 1em;
     cursor: pointer;
-    background-image: var(--gradient2);
-    color: var(--white);
+    background-image: transparent;
+    color: var(--orange);
     border-radius: 0 20px;
     padding: .8em 2.5em;
-    transition: border-radius .5s;
+    border: 1px solid var(--orange);
+    transition: color .3s ease-in, border-radius .5s !important;
 }
 
 .pricing-button:hover {
     border-radius: 20px  0;
-    transition: border-radius .5s;
+    background-color: var(--white);
+    color: var(--orange) !important;
+    transition: border-radius .5s !important;
 }
 
-.plan-title {
-    font-size: 1.5em;
+.pricing-button.hovered {
+    color: var(--white);
+    border: 1px solid var(--white);
+    transition: color .3s ease-in;
+}
+
+.plan-title h2 {
+    font-size: 30px;
     color: var(--dark-blue);
     text-align: center;
 }
 
+.plan-title.hovered {
+    color: var(--white);
+}
+
 .pricing-plan-price > h2 {
-    color: #d62828;
-    font-size: 2.5em;
+    color: var(--orange);
+    font-size: 70px;
+    font-family: SourceSansPro900, sans-serif;
+    transition: color .3s ease-in;
+}
+
+.pricing-plan-price.hovered > h2 {
+    color: var(--white);
+    transition: color .3s ease-in;
+}
+
+.check-icon.hovered {
+    color: var(--white) !important;
+}
+
+/* Footer */
+
+footer {
+    display: flex;
+    gap: 1em;
+    flex-direction: column;
+    background: url(./assets/images/bg6.png), url(./assets/images/bg5.png), var(--gradient);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 5em;
+}
+
+.footer-top {
+    display: flex;
+    margin: auto;
+    gap: 28.5em;
+    padding-bottom: 5em;
+}
+
+.footer-arrow {
+    transition: transform 0.5s;
+}
+
+.footer-arrow.hovered {
+    transform: translateX(3px);
+    transition: transform 0.5s;
+}
+
+.Informacije > ul {
+    display: flex;
+    flex-direction: column;
+    gap: .6em;
+}
+
+.Informacije > ul  > li {
+    display: flex;
+    align-items: center;
+    gap: .6em;
+}
+
+.Informacije > ul > li > a,
+.Informacije > ul > li > h2 {
+    color: var(--white);
+}
+
+.Informacije {
+    display: flex;
+    gap: 5em;
+}
+
+.footer-bottom > p {
+    max-width: 1200px;
+    margin: auto;
+    padding: 1em;
+    color: var(--white);
+}
+
+.footer-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+}
+
+.footer-logo > img {
+    max-width: 6em;
+}
+
+.footer-logo > p {
+    color: var(--white);
+}
+
+.to-top {
+    display: block;
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
+    z-index: 5;
+    padding: 1em 1.2em;
+    background-color: var(--orange);
+    border-radius: 10px;
 }

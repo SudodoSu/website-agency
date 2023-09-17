@@ -9,28 +9,15 @@ function PricingSection() {
         {id: 3, title: "Premium Plan", price: "€ 300", des: [{title: "Graphic Design", doesHave: true}, {title: "Graphic Design", doesHave: true}, {title: "Graphic Design", doesHave: true}, {title: "Graphic Design", doesHave: true}]}
     ];
 
-
-    const initialHoverState = data.map((datas) => datas.num === 3);
-    const [hover, sethover] = useState(initialHoverState);
+    const [hover, sethover] = useState(2);
 
 
     function background(e) {
-        sethover((event) => {
-            const handleHover = [...event];
-            handleHover[e] = true;
-            return handleHover;
-        });
+        sethover(e);
     }
 
-    function backgroundOut(e) {
-        sethover((event) => {
-            const handleHover = [...event];
-            handleHover[e] = false;
-            return handleHover;
-        });
-    }
-
-
+    const isHovered = (e) => e === hover;
+    
     return(
         <section className="pricing">
             <div className="max-width">
@@ -42,7 +29,7 @@ function PricingSection() {
                     </p>
                 </div>
                 <div className="pricing-section">
-                    <PricingPlan articles={data} background={background} backgroundOut={backgroundOut} hover={hover}/>
+                    <PricingPlan articles={data} background={background} hover={isHovered}/>
                 </div>
             </div>    
         </section>

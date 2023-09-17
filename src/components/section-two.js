@@ -10,30 +10,19 @@ import Article from "./section-two/article";
 
 
 function SectionTwo() {
-    const [article, setArticle] = useState([
+    const article = [
         {num: 1, img: Research, imgOrange: ResearchO, title: "Strategija & Istraživanje", des: "Naša web dizajn agencija temelji se na vrhunskoj strategiji i dubokom istraživanju kako bismo stvarali web stranice koje ostavljaju snažan utisak."},
         {num: 2, img: WebDevelopment, imgOrange: WebDevelopmentO, title: "Web Development", des: "Bavimo se web developmentom s fokusom na performanse i korisničko iskustvo kako bismo stvorili web stranice koje zadovoljavaju najviše standarde i ciljeve naših klijenata."},
         {num: 3, img: WebSolutions, imgOrange: WebSolutionsO, title: "Web Rješenja", des: "S našim web rješenjima, vaša online prisutnost će se transformirati, pružajući vam konkurentske prednosti i bolju interakciju s vašim korisnicima."}
-]);
+];
 
-    const initialHoverState = article.map((articles) => articles.num === 3);
-    const [hover, sethover] = useState(initialHoverState);
+    const [hover, sethover] = useState(2);
 
     function background(e) {
-        sethover((event) => {
-            const handleHover = [...event];
-            handleHover[e] = true;
-            return handleHover;
-        });
+        sethover(e);
     }
 
-    function backgroundOut(e) {
-        sethover((event) => {
-            const handleHover = [...event];
-            handleHover[e] = false;
-            return handleHover;
-        });
-    }
+    const isHovered = (e) => e === hover;
 
     return (
             <section className="section-two">
@@ -43,7 +32,7 @@ function SectionTwo() {
                         <div className="section-two-line"></div>
                     </div>
                     <div className="our-speciallization-articles">
-                        <Article articles={article} background={background} backgroundOut={backgroundOut} hover={hover}/>
+                        <Article articles={article} background={background} hover={isHovered}/>
                     </div>
                 </div>
             </section>

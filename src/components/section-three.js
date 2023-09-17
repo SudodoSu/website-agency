@@ -28,7 +28,7 @@ function SectionThree() {
                         više o našem radu i kontaktirajte nas kako bismo zajedno ostvarili vaše digitalne ambicije. 
                         Vaša online prisutnost, uključujući i održavanje web stranica, je naša briga.
                         </p>
-                        <button>Besplatne Konzultacije <FontAwesomeIcon icon={faArrowRight} style={{color: "#112d4e",}} /></button>
+                        <button>Besplatne Konzultacije <FontAwesomeIcon icon={faArrowRight} style={{color: "#F9F7F7",}} /></button>
                     </div>
                 </div>
             </div>

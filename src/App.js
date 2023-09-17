@@ -1,4 +1,6 @@
 import './App.css';
+import ToTop from './components/back-to-top';
+import Footer from './components/footer';
 import Header from './components/header';
 import PricingSection from './components/pricing-section';
 import SectionFour from './components/section-four';
@@ -15,6 +17,8 @@ function App() {
       <SectionThree />
       <SectionFour />
       <PricingSection />
+      <Footer  />
+      <ToTop />
     </>
   );
 }

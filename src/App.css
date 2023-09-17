@@ -708,3 +708,39 @@ footer {
     background-color: var(--orange);
     border-radius: 10px;
 }
+
+/* Client Card */
+
+.section-five {
+    padding-bottom: 5em;
+    padding-top: 5em;
+    margin-bottom: 10em;
+    background-color: var(--grey);
+}
+
+.section-five div{
+    margin: 0 auto;
+}
+
+.clients-title h1 {
+    font-size: 3em;
+    color: var(--dark_blue);
+}
+
+.clients-title {
+    text-align: center;
+    padding-bottom: 3em;
+}
+
+.inner-carousel {
+    display: flex;
+    gap: 1em;
+}
+
+.carousel {
+    cursor: grab;
+}
+
+.client-card {
+    padding: 1em;
+}

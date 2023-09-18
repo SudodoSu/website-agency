@@ -1,18 +1,17 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faQuoteLeft, faMinus } from '@fortawesome/free-solid-svg-icons';
-import { motion } from "framer-motion";
 
 function ClientCard({clients}) {
     return(
         <>
             {clients.map((client, index) => (
-                <motion.div key={index} className="client-card">
-                    <FontAwesomeIcon icon={faQuoteLeft} style={{color: "#DBE2EF",}}/>
-                    <div>
+                <div key={index} className="client-card">
+                    <FontAwesomeIcon icon={faQuoteLeft} size="2xl" style={{color: "#112D4E",}}/>
+                    <div className='client-des'>
                         <p>{client.des}</p>
-                        <span><FontAwesomeIcon icon={faMinus} style={{color: "#DBE2EF",}}/> {client.name}</span>
+                        <span><FontAwesomeIcon icon={faMinus} size="xl" style={{color: "#112D4E",}}/> {client.name}</span>
                     </div>
-                </motion.div>
+                </div>
             ))}
         </>
     );

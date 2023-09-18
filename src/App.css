@@ -144,6 +144,8 @@ header.scrolled {
 .navbar-lista > li > a {
     color: var(--white);
     cursor: pointer;
+    height: 100%;
+    width: 100%;
 }
 
 .navbar-lista > li > a.scrolled {
@@ -164,7 +166,7 @@ header.scrolled {
 
 .button-class > button > span {
     font-family: Poppins400, sans-serif;
-    font-size: .8em
+    font-size: .8em;
 }
 
 .button-class > button:hover {
@@ -274,8 +276,6 @@ header.scrolled {
     padding-bottom: 10em;
     padding-top: 7em;
 }
-
-
 
 .section-two-title {
     text-align: center;
@@ -734,13 +734,59 @@ footer {
 
 .inner-carousel {
     display: flex;
-    gap: 1em;
+    transition: transform 2s ease-in-out;
 }
 
+
 .carousel {
-    cursor: grab;
+    overflow: hidden;
 }
 
 .client-card {
-    padding: 1em;
+    padding: 1rem 15rem;
+    min-width: 1200px;
+    display: flex;
+    gap: 2rem;
+}
+
+.bottom-quote {
+    display: block;
+    float: right;
+}
+
+.client-des {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.client-des > span {
+    font-family: SourceSansPro900, sans-serif;
+    font-size: 1.8rem;
+    color: var(--dark-blue);
+}
+
+.dots {
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+}
+
+.dot {
+    cursor: pointer;
+}
+
+.dot.active {
+    color: var(--orange) !important;
+}
+
+.nav-client {
+    display: flex;
+    justify-content: center;
+    max-width: 30%;
+}
+
+.nav-client > button {
+    cursor: pointer;
 }

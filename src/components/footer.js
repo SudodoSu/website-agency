@@ -26,7 +26,7 @@ function Footer() {
                         <ul>
                             <li><h2>Informacije</h2></li> 
                             <li onMouseEnter={() => onHover(1)} onMouseLeave={HoverLeave}>
-                                <FontAwesomeIcon className={`footer-arrow ${hover === 1 ? "hovered" : ""}`} icon={faChevronRight} style={{color: "#F9F7F7",}} /><a>Pravila pricvatnosti</a></li>
+                                <FontAwesomeIcon className={`footer-arrow ${hover === 1 ? "hovered" : ""}`} icon={faChevronRight} style={{color: "#F9F7F7",}} /><a href="/privacy-policy">Pravila privatnosti</a></li>
                             <li onMouseEnter={() => onHover(2)} onMouseLeave={HoverLeave}>
                                 <FontAwesomeIcon className={`footer-arrow ${hover === 2 ? "hovered" : ""}`} icon={faChevronRight} style={{color: "#F9F7F7",}} /><a>Pravila povrata</a></li>
                             <li onMouseEnter={() => onHover(3)} onMouseLeave={HoverLeave}>
@@ -47,7 +47,7 @@ function Footer() {
             </div>
             <div className="footer-bottom">
                 <hr />
-                <p>Boost Web <span><FontAwesomeIcon icon={faCopyright} style={{color: "#F9F7F7",}} /> </span>2022. Sva prava pridržana.</p>
+                <p>Boost Web <span><FontAwesomeIcon icon={faCopyright} style={{color: "#F9F7F7",}} /> </span>2023. Sva prava pridržana.</p>
             </div>
         </footer>
     );

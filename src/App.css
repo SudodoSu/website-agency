@@ -40,6 +40,7 @@
     --red: #d62828;
     --orange: #fb8500;
     --yellow: #ffb703;
+
     /* Gradiant */
     --gradient: linear-gradient(90deg,  #112D4E, #3F72AF, #112D4E);
     --gradient3: linear-gradient(to left,  #112D4E, #3F72AF);
@@ -80,13 +81,14 @@ p {
 }
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
-    font-family: Source Sans Pro,sans-serif;
+    font-family: SourceSansPro700,sans-serif;
     font-weight: 700;
 }
 
 button {
     border: none;
     background-color: transparent;
+    font-family: Poppins400, sans-serif;
 }
 
 body {
@@ -134,11 +136,11 @@ header.scrolled {
 }
 
 .navbar-lista {
-    font-family: Poppins600, sans-serif;
+    font-family: Poppins400, sans-serif;
     display: flex;
     gap: 1em;
-    font-size: 1.3em;
     align-items: center;
+    list-style: none;
 }
 
 .navbar-lista > li > a {
@@ -146,31 +148,71 @@ header.scrolled {
     cursor: pointer;
     height: 100%;
     width: 100%;
+    position: relative;
+    padding: .5em 0;
 }
+
+/* Navbar list animation */
+
+header nav ul li a:before, header nav ul li a:after
+{
+    position: absolute;
+    opacity: 0;
+    width: 0%;
+    height: 2px;
+    content: '';
+    background: var(--white);
+    transition: all 0.3s;
+}
+
+header nav ul li a:before
+{
+    left: 0px;
+    top: 0px;
+}
+
+header nav ul li a:after
+{
+    right: 0px;
+    bottom: 0px;
+}
+
+header nav ul li a:hover:before, header nav ul li a:hover:after
+{
+    opacity: 1;
+    width: 100%;
+}
+
 
 .navbar-lista > li > a.scrolled {
     color: var(--dark_blue);
 }
 
-.button-class > button {
-    padding: .5em 1em;
-    font-family: Poppins600, sans-serif;
+header nav ul li a.scrolled:before, header nav ul li a.scrolled:after {
+    background-color: var(--dark_blue);
+}
+
+.button-class {
+    padding: 0.7em 1.5em;
     font-size: 1em;
     background-image: var(--gradient2);
-    color: var(--white);
-    border-radius: 0px 30px;
+    border-radius: 0px 20px;
     cursor: pointer;
     border: none;
     transition: border-radius 0.5s;
+    text-transform: uppercase;
 }
 
-.button-class > button > span {
-    font-family: Poppins400, sans-serif;
-    font-size: .8em;
+.button-class a {
+    color: var(--white);
 }
 
-.button-class > button:hover {
-    border-radius: 30px 0;
+.button-class > a > span {
+    font-size: .7em;
+}
+
+.button-class:hover {
+    border-radius: 20px 0;
     transition: all 0.5s;
 }
 
@@ -191,7 +233,7 @@ header.scrolled {
 .section-one:after {
     content: "";
     background-image: url(./assets/images/section-one-white-background.png);
-    background-size: contain;
+    background-size: 100%;
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -252,17 +294,16 @@ header.scrolled {
     max-width: 10em;
     padding: .7em 1em;
     background-image: var(--gradient2);
-    border-radius: 0 30px;
+    border-radius: 0 20px;
     color: var(--white);
-    font-size: 1.2em;
-    font-family: Poppins600, sans-serif;
+    font-size: 1em;
     border: none;
     cursor: pointer;
     z-index: 1;
     transition: border-radius 0.5s;
 }
 .section-one-title > button:hover {
-    border-radius: 30px 0;
+    border-radius: 20px 0;
     transition: all 0.5s;
 }
 
@@ -362,8 +403,7 @@ header.scrolled {
     width: 50px;
     height: 50px;
     border-radius: 50px;
-    font-size: 1.1em;
-    font-family: SourceSansPro900;
+    font-size: 1em;
     cursor: pointer;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
@@ -409,17 +449,16 @@ header.scrolled {
     max-width: 15em;
     padding: 0.7em 1em;
     background-image: var(--gradient2);
-    border-radius: 0 30px;
+    border-radius: 0 20px;
     color: var(--white);
-    font-size: 1.2em;
-    font-family: Poppins600, sans-serif;
+    font-size: 1em;
     border: none;
     cursor: pointer;
     text-align: left;
     transition: border-radius 0.5s;
 }
 .section-three-text > button:hover {
-    border-radius: 30px 0;
+    border-radius: 20px 0;
     transition: all 0.5s;
 }
 
@@ -576,7 +615,6 @@ header.scrolled {
 }
 
 .pricing-button {
-    font-family: Poppins600, sans-serif;   
     font-size: 1em;
     cursor: pointer;
     background-image: transparent;
@@ -670,6 +708,10 @@ footer {
 .Informacije > ul > li > h2 {
     color: var(--white);
 }
+
+/* .Informacije > ul > li > a {
+    cursor: pointer;
+} */
 
 .Informacije {
     display: flex;
@@ -789,4 +831,64 @@ footer {
 
 .nav-client > button {
     cursor: pointer;
+}
+
+/* Privacy Policy */
+
+.privacy-policy-article {
+    margin: auto;
+    padding: 5rem 0;
+}
+
+
+.first-section:after {
+    content: "";
+    background-image: url(./assets/images/white-background.png);
+    background-size: 100%;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    z-index: 0;
+}
+
+.first-section {
+    background: url(./assets/images/bg6.png), url(./assets/images/bg5.png), var(--gradient);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top right;
+    height: 500px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.first-section-content h1 {
+    font-size: 45px;
+    color: var(--white);
+}
+
+.first-section-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.first-section-path {
+    display: flex;
+    gap: 1em;
+    border-radius: 50px;
+    background-image: var(--gradient2);
+    align-items: center;
+    padding: 0.5em 1em;    
+    justify-content: center;
+}
+
+.first-section-path h4 {
+    color: var(--white);
+    font-family: Poppins400, sans-serif;
 }

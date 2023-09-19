@@ -85,10 +85,10 @@ p {
     font-weight: 700;
 }
 
-button {
+button, input, textarea, select {
     border: none;
     background-color: transparent;
-    font-family: Poppins400, sans-serif;
+    font-family: Poppins400, sans-serif ;
 }
 
 body {
@@ -868,7 +868,7 @@ footer {
 }
 
 .first-section-content h1 {
-    font-size: 45px;
+    font-size: 55px;
     color: var(--white);
 }
 
@@ -891,4 +891,50 @@ footer {
 .first-section-path h4 {
     color: var(--white);
     font-family: Poppins400, sans-serif;
+}
+
+
+/* Contact Form */
+
+
+.contact-us {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    padding: 5em 0;
+}
+
+.contact-us-image,
+.contact-us-outform {
+    width: 50%;
+}
+
+.contact-us-image {
+    animation: image_animation 4s linear infinite;
+}
+
+.contact-us-outform form {
+    width: 80%;
+    margin: auto;
+}
+
+.contact-us-outform form div {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    height: 2.5em;
+}
+
+.contact-us-outform form div input,
+.contact-us-outform form div select,
+.contact-us-outform form div textarea {
+    width: 100%;
+    border-radius: 10px;
+    height: 100%;
+    font-size: 1em;
+}
+
+.contact-us-outform form div textarea {
+    height: 10em;
 }

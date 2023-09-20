@@ -198,9 +198,9 @@ header nav ul li a.scrolled:before, header nav ul li a.scrolled:after {
     background-image: var(--gradient2);
     border-radius: 0px 20px;
     cursor: pointer;
-    border: none;
     transition: border-radius 0.5s;
     text-transform: uppercase;
+    border: none;
 }
 
 .button-class a {
@@ -910,31 +910,138 @@ footer {
     width: 50%;
 }
 
+.contact-us-outform {
+    height: 100%;
+}
+
 .contact-us-image {
     animation: image_animation 4s linear infinite;
 }
 
 .contact-us-outform form {
     width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     margin: auto;
+    gap: 1.5rem;
+    height: 100%;
 }
 
 .contact-us-outform form div {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
+    display: flex;  
     height: 2.5em;
 }
 
 .contact-us-outform form div input,
-.contact-us-outform form div select,
 .contact-us-outform form div textarea {
     width: 100%;
-    border-radius: 10px;
     height: 100%;
+    font-size: 1em; 
+    padding: 1em;
+}
+
+.contact-us-outform form div textarea{
+    resize: none;
+    border-radius: 1.5rem !important;
+}
+
+.contact-us-textarea-div {
+    height: 15rem !important;
+}
+
+.contact-us-outform form div select,
+.contact-us-outform form div input,
+.contact-us-outform form div textarea {
+    box-shadow: var(--shadow);
+    border-radius: 30px;
+    outline: none;
+    transition: all 0.5s ;
+}
+
+.contact-us-outform form div select:focus,
+.contact-us-outform form div input:focus,
+.contact-us-outform form div textarea:focus {
+    border: 1px solid var(--blue);
+    box-shadow: none;
+    transition: all 0.5s ;
+}
+
+.contact-us-outform form div select option{
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+}
+
+.contact-us-outform form div select {
+    padding-left: 1em;
+    cursor: pointer;
+    width: 50%;
+    height: 100%;
+    font-size: 0.9em;
+}
+
+.submit-button button {
+    width: 40% !important; 
+    background-image: var(--gradient2);
+    border-radius: 0px 20px;
+    transition: border-radius 0.5s;
     font-size: 1em;
 }
 
-.contact-us-outform form div textarea {
-    height: 10em;
+.submit-button button input {
+    box-shadow: none !important;
+    cursor: pointer;
+    color: var(--white);
+    padding: 0 !important;
+    border: none !important;
+}
+
+.submit-button button:hover {
+    border-radius: 20px 0;
+    transition: all 0.5s;
+}
+
+.submit-button.clicked{
+    transform: scale(0.8);
+    transition: transform 0.5s ease-in-out;
+}
+
+.submit-button {
+    justify-self: flex-start;
+    transition: transform 0.5s ease-in-out;
+}
+
+.successfully-sent {
+    position: fixed;
+    width: 20rem;
+    height: 7rem;
+    z-index: 5;
+    top: 15%;
+    right: 0;
+    background-color: var(--dark_blue);
+    display: flex;
+    gap: 2rem;
+    padding: 1em 2em;
+}
+
+.successfully-sent-check {
+    align-self: center;
+}
+
+.successfully-sent-message h2 {
+    color: var(--white);
+    font-family: SourceSansPro600, sans-serif;
+}
+
+.successfully-sent-message p {
+    font-size: .8em;
+}
+
+.successfully-sent-close {
+    cursor: pointer;
+}
+
+.successfully-sent.closed {
+    display: none;
 }

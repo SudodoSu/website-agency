@@ -43,7 +43,7 @@
 
     /* Gradiant */
     --gradient: linear-gradient(90deg,  #112D4E, #3F72AF, #112D4E);
-    --gradient3: linear-gradient(to left,  #112D4E, #3F72AF);
+    --gradient3: linear-gradient(to right,  #112D4E, #3F72AF);
     --gradient2: linear-gradient(90deg,#d62828, #fb8500, #ffb703);
 
     /* Shadow */
@@ -497,7 +497,7 @@ header nav ul li a.scrolled:before, header nav ul li a.scrolled:after {
     justify-content: center;
     align-items: center;
     flex-basis: 80px;
-    box-shadow: 0 2px 15px rgba(63, 113, 175, 0.712);
+    box-shadow: 0 2px 15px rgba(251, 133, 0, 0.5);
 }
 
 .section-four-inner-articles {
@@ -1031,7 +1031,6 @@ footer {
 
 .successfully-sent-message h2 {
     color: var(--white);
-    font-family: SourceSansPro600, sans-serif;
 }
 
 .successfully-sent-message p {

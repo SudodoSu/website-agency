@@ -28,20 +28,20 @@ function Footer() {
                             <li onMouseEnter={() => onHover(1)} onMouseLeave={HoverLeave}>
                                 <FontAwesomeIcon className={`footer-arrow ${hover === 1 ? "hovered" : ""}`} icon={faChevronRight} style={{color: "#F9F7F7",}} /><a href="/privacy-policy">Pravila privatnosti</a></li>
                             <li onMouseEnter={() => onHover(2)} onMouseLeave={HoverLeave}>
-                                <FontAwesomeIcon className={`footer-arrow ${hover === 2 ? "hovered" : ""}`} icon={faChevronRight} style={{color: "#F9F7F7",}} /><a>Pravila povrata</a></li>
+                                <FontAwesomeIcon className={`footer-arrow ${hover === 2 ? "hovered" : ""}`} icon={faChevronRight} style={{color: "#F9F7F7",}} /><a href="/return-policy">Pravila povrata</a></li>
                             <li onMouseEnter={() => onHover(3)} onMouseLeave={HoverLeave}>
-                                <FontAwesomeIcon className={`footer-arrow ${hover === 3 ? "hovered" : ""}`} icon={faChevronRight} style={{color: "#F9F7F7",}} /><a>Pravila pružanja usluge</a></li>
+                                <FontAwesomeIcon className={`footer-arrow ${hover === 3 ? "hovered" : ""}`} icon={faChevronRight} style={{color: "#F9F7F7",}} /><a href="/terms-of-use">Pravila pružanja usluge</a></li>
                         </ul>
                         <ul>
                             <li><h2>Brzi linkovi</h2></li> 
                             <li onMouseEnter={() => onHover(4)} onMouseLeave={HoverLeave}>
-                                <FontAwesomeIcon className={`footer-arrow ${hover === 4 ? "hovered" : ""}`} icon={faChevronRight} style={{color: "#F9F7F7",}} /><a>Reference</a></li>
+                                <FontAwesomeIcon className={`footer-arrow ${hover === 4 ? "hovered" : ""}`} icon={faChevronRight} style={{color: "#F9F7F7",}} /><a href="/reference">Reference</a></li>
                             <li onMouseEnter={() => onHover(5)} onMouseLeave={HoverLeave}>
-                                <FontAwesomeIcon className={`footer-arrow ${hover === 5 ? "hovered" : ""}`} icon={faChevronRight} style={{color: "#F9F7F7",}} /><a>O nama</a></li>
+                                <FontAwesomeIcon className={`footer-arrow ${hover === 5 ? "hovered" : ""}`} icon={faChevronRight} style={{color: "#F9F7F7",}} /><a href="/home">O nama</a></li>
                             <li onMouseEnter={() => onHover(6)} onMouseLeave={HoverLeave}>
-                                <FontAwesomeIcon className={`footer-arrow ${hover === 6 ? "hovered" : ""}`} icon={faChevronRight} style={{color: "#F9F7F7",}} /><a>Zatraži ponudu</a></li>
+                                <FontAwesomeIcon className={`footer-arrow ${hover === 6 ? "hovered" : ""}`} icon={faChevronRight} style={{color: "#F9F7F7",}} /><a href="/contact-us">Zatraži ponudu</a></li>
                             <li onMouseEnter={() => onHover(7)} onMouseLeave={HoverLeave}>
-                                <FontAwesomeIcon className={`footer-arrow ${hover === 7 ? "hovered" : ""}`} icon={faChevronRight} style={{color: "#F9F7F7",}} /><a>Kontaktiraj nas</a></li>
+                                <FontAwesomeIcon className={`footer-arrow ${hover === 7 ? "hovered" : ""}`} icon={faChevronRight} style={{color: "#F9F7F7",}} /><a href="/contact-us">Kontaktiraj nas</a></li>
                         </ul>
                 </div>
             </div>

@@ -20,6 +20,10 @@ export const ContactUs = () => {
     e.preventDefault();
 
     setMessageSent(true);
+
+    setTimeout(() => {
+        setMessageSent(false);
+      }, 3000);
     
     emailjs.sendForm('service_q0fv0h8', 'template_k2wqm7h', form.current, 'QslYBLVV8d39BKjwl')
       .then((result) => {
@@ -41,7 +45,9 @@ export const ContactUs = () => {
       }, 120);
   }
 
-  const handleClose = () => setClose(true);
+  const handleClose = () => { 
+        setClose(true);
+    };
 
   return (
     <>

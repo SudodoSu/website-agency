@@ -29,7 +29,7 @@ function SectionFour() {
         <section className="section-four">
             <div className="max-width">
                 <div className="section-four-title">
-                    <h1>Naše Značajke</h1>
+                    <h1>Zašto su naše usluge tako dobre</h1>
                     <div className="section-two-line"></div>    
                 </div>
                 <div className="section-four-bottom">

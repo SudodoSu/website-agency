@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import "../../App.css";
 
 function Article({articles, background, hover}) {
@@ -15,7 +15,8 @@ function Article({articles, background, hover}) {
                     <div className="our-speciallization-articles-title">
                         <h2>{article.title}</h2>
                         <p>{article.des}</p>
-                        <button className={`our-speciallization-articles-title > button ${(hover(article.num)) ? "backgroundHover" : ""}`}><FontAwesomeIcon icon={faArrowRight} style={{color: "#112d4e",}} /></button>
+                        <button className={`our-speciallization-articles-title > button ${(hover(article.num)) ? "backgroundHover" : ""}`}>
+                        <FontAwesomeIcon icon={faChevronRight} style={{color: "#112d4e",}} /></button>
                     </div>
                 </article>
             ))}

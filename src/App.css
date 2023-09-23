@@ -157,6 +157,11 @@ header.scrolled {
 
 /* Navbar list animation */
 
+.hb {
+    width: auto;
+    display: none;
+  }
+
 header nav ul li a:before, header nav ul li a:after
 {
     position: absolute;
@@ -373,12 +378,12 @@ header nav ul li a.scrolled:before, header nav ul li a.scrolled:after {
 .our-speciallization-articles > article {
     display: flex;
     flex-direction: column;
-    gap: 2em;
+    gap: 0em;
     border-radius: 5px;
     border-bottom: 1px solid rgba(0,0,0,.175);
     border-left: 1px solid rgba(0,0,0,.035);
     border-right: 1px solid rgba(0,0,0,.035);
-    padding: 4em 2em 2em 2em;
+    padding: 1em;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -424,6 +429,7 @@ header nav ul li a.scrolled:before, header nav ul li a.scrolled:after {
 .our-speciallization-articles-title > h2 {
     font-family: SourceSansPro700;
     font-size: 2em;
+    color: var(--dark_blue);
 }
 
 /* Section Three */
@@ -548,7 +554,7 @@ header nav ul li a.scrolled:before, header nav ul li a.scrolled:after {
 
 .iconAnimation {
     display: block;
-    animation: animation 0.5s;
+    animation: animation 0.6s;
 }
 
 @keyframes animation{
@@ -1097,6 +1103,9 @@ footer {
     .Informacije {
         gap: 1em;
     }
+    .client-card > div {
+        max-width: 70%;
+    }
 }
 
 /* Width 1200px */
@@ -1125,7 +1134,7 @@ footer {
         flex-direction: column;
     }
     .section-four-image {
-        max-width: 50%;
+        max-width: 100%;
         align-self: center;
     }
     .section-three div {
@@ -1133,10 +1142,18 @@ footer {
         grid-template-areas: 
         "text"
         "image";
-        
+        width: 100%;
     }
     .section-three div {
         margin: auto;
+    }
+    .section-three-right .section-three-title {
+        width: 70%;
+        text-align: center;
+    }
+    .section-three-line{
+        width: 150px !important;
+        
     }
     .footer-top {
         display: grid;
@@ -1159,7 +1176,7 @@ footer {
     }
 } 
 
-/* Width 800px */
+/* Width 788px */
 
  @media (max-width: 788px) {
     .section-one  div {
@@ -1168,14 +1185,64 @@ footer {
     }
     .section-one > div > div {
         width: 100%;
+        display: flex;
+
     }
     .section-one-compimg {
-        margin: auto !important;
+        left: 0;
+        justify-self: center;
+    }
+
+    .section-one > div {
+        padding-top: 200px;
+    }
+    .section-one:after {
+        background-position: bottom;
+    }
+    .client-card > div {
+        max-width: 75%;
+    }
+    .section-four-inner-articles {
+        flex-direction: column;
+    }
+    .navbar-lista {
+        display: none;
+    }
+    .hb {
+        display: block;
+    }
+    .navbar {
+        justify-content: space-between;
+        padding-left: 1em;
+        padding-right: 1em;
+        align-items: center;
+    }
+    .navbar.scrolled {
+        padding: 0.2em 1em;
     }
 } 
+ 
 
-/* Width 560px */
+/* Width 375px */
 
- @media (max-width: 560px) {
-    
-} 
+@media (max-width: 375px) {
+    .max-width {
+        max-width: 50%;
+    }
+    .footer-logo {
+        align-items: flex-start;
+        text-align: left;
+    }
+    .Informacije {
+        flex-direction: column;
+        gap: 2em;
+    }
+    .client-card > div {
+        max-width: 75%;
+    }
+    .pricing-section {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        place-content: center;
+    }
+}

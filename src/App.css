@@ -821,19 +821,20 @@ footer {
     transition: transform 2s ease-in-out;
 }
 
-
 .carousel {
     overflow: hidden;
+    position: relative;
 }
 
 .client-card {
-    min-width: 100%;
+    min-width: 1200px !important;
     display: flex;
+    justify-content: center;
     gap: 2rem;
 }
 
 .client-card > div {
-    max-width: 60%;
+    width: 60%;
 }
 
 .bottom-quote {
@@ -845,12 +846,12 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 .client-des > span {
-    font-family: SourceSansPro900, sans-serif;
-    font-size: 1.8rem;
+    font-family: SourceSansPro600, sans-serif;
+    font-size: 1.2rem;
     color: var(--dark-blue);
 }
 
@@ -874,9 +875,7 @@ footer {
     max-width: 30%;
 }
 
-.nav-client > button {
-    cursor: pointer;
-}
+
 
 /* Privacy Policy */
 
@@ -1095,7 +1094,7 @@ footer {
 
 @media (max-width: 1400px) {
     .max-width {
-        max-width: 80%!important;
+        max-width: 80% !important;
     }
     .footer-top {
         gap: 10em;
@@ -1103,8 +1102,8 @@ footer {
     .Informacije {
         gap: 1em;
     }
-    .client-card > div {
-        max-width: 70%;
+    .client-card {
+        min-width: 100% !important;
     }
 }
 
@@ -1200,7 +1199,8 @@ footer {
         background-position: bottom;
     }
     .client-card > div {
-        max-width: 75%;
+        width: 100%;
+        padding: 1em 1em;
     }
     .section-four-inner-articles {
         flex-direction: column;
@@ -1236,9 +1236,6 @@ footer {
     .Informacije {
         flex-direction: column;
         gap: 2em;
-    }
-    .client-card > div {
-        max-width: 75%;
     }
     .pricing-section {
         display: grid;

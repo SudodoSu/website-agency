@@ -60,22 +60,12 @@ function ClientWords() {
         <div className="section-five-tabs">
           <div className="carousel">
             <div
-              className="inner-carousel max-width"
+              className="inner-carousel"
               style={{ transform: `translate(-${activeIndex * 100}%)` }}
             >
               <ClientCard clients={clients} />
             </div>
             <div className="nav-client">
-              <button
-                onClick={() => updIndex(activeIndex - 1)}
-                className="left-button"
-              >
-                <FontAwesomeIcon
-                  icon={faChevronLeft}
-                  style={{ color: "#112d4e" }}
-                  size="xl"
-                />
-              </button>
               <div className="dots">
                 {clients.map((client, index) => {
                   return (
@@ -89,16 +79,6 @@ function ClientWords() {
                   );
                 })}
               </div>
-              <button
-                onClick={() => updIndex(activeIndex + 1)}
-                className="right-button"
-              >
-                <FontAwesomeIcon
-                  icon={faChevronRight}
-                  style={{ color: "#112d4e" }}
-                  size="xl"
-                />
-              </button>
             </div>
           </div>
         </div>

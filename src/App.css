@@ -100,7 +100,6 @@ body {
 /* Header */
 
 header {
-    height: 7em;
     width: 100%;
     background-color: transparent;
     position: fixed;
@@ -110,31 +109,64 @@ header {
 
 header.scrolled {
     background-color: var(--white);
-    height: 5.4em;
     box-shadow: var(--shadow);
     transition: all 0.3s;
 }
 
 .navbar {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    align-items: center;
     height: 100%;
     padding: 1em 0;
     transition: all 0.5s;
+    margin: auto;
 }
 
 .navbar.scrolled {
-    padding: .2em 0;
+    height: 90%;
     transition: all 0.5s;
+    padding-top: 0.5em !important;
+    padding-bottom: 0.5em !important;
+    align-items: center;
+}
+
+.navbar-lista.activeState {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    align-items: flex-start;
+    left: 0;
+    background-color: var(--white);
+    height: 100vh;
+    width: 280px;
+    top: 0;
+    padding-top: 8em;
+    box-shadow: var(--shadow);
+}
+
+.navbar-lista.activeState li {
+    border-bottom: 1px solid var(--grey);
+    width: 90%;
+    margin: 0 auto;
+}
+.navbar-lista.activeState .nav-a {
+    color: var(--dark_blue);
+    width: 100% !important;
+}
+
+.navbar-lista.activeState button {
+    margin: 0 auto;
+    width: 90%;
 }
 
 .logo {
-    height: 5em;
+    height: 4em;
 }
 
 
 .logo img {
-    height: 5em;
+    height: 4em;
     align-self: center;
 }
 
@@ -160,6 +192,7 @@ header.scrolled {
 .hb {
     width: auto;
     display: none;
+    z-index: 5;
   }
 
 header nav ul li a:before, header nav ul li a:after
@@ -191,7 +224,7 @@ header nav ul li a:hover:before, header nav ul li a:hover:after
     width: 100%;
 }
 
-
+/*  */
 .navbar-lista > li > a.scrolled {
     color: var(--dark_blue);
 }
@@ -329,9 +362,12 @@ header nav ul li a.scrolled:before, header nav ul li a.scrolled:after {
 
 .section-two-title {
     text-align: center;
-    font-size: 2em;
     font-family: SourceSansPro700, sans-serif;
     color: var(--dark_blue);
+}
+
+.section-two-title h1 {
+    font-size: 3em;
 }
 
 .section-two-line {
@@ -388,7 +424,7 @@ header nav ul li a.scrolled:before, header nav ul li a.scrolled:after {
 }
 
 .our-speciallization-articles > article.growArticle {
-    transform: translateY(-1em);
+    transform: translateY(-.5em);
     transition: transform 0.3s, box-shadow 0.3s;
     box-shadow: var(--shadow);
 }
@@ -1146,13 +1182,11 @@ footer {
     .section-three div {
         margin: auto;
     }
-    .section-three-right .section-three-title {
-        width: 70%;
-        text-align: center;
-    }
     .section-three-line{
         width: 150px !important;
-        
+    }
+    .section-three-title {
+        justify-content: flex-start;
     }
     .footer-top {
         display: grid;
@@ -1193,7 +1227,7 @@ footer {
     }
 
     .section-one > div {
-        padding-top: 200px;
+        padding-top: 8em;
     }
     .section-one:after {
         background-position: bottom;
@@ -1211,15 +1245,6 @@ footer {
     .hb {
         display: block;
     }
-    .navbar {
-        justify-content: space-between;
-        padding-left: 1em;
-        padding-right: 1em;
-        align-items: center;
-    }
-    .navbar.scrolled {
-        padding: 0.2em 1em;
-    }
 } 
  
 
@@ -1227,7 +1252,7 @@ footer {
 
 @media (max-width: 375px) {
     .max-width {
-        max-width: 50%;
+        max-width: 90% !important;
     }
     .footer-logo {
         align-items: flex-start;
@@ -1239,7 +1264,38 @@ footer {
     }
     .pricing-section {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         place-content: center;
+    }
+    h1 {
+        font-size: 2em !important;
+    }
+    h2 {
+        font-size: 1.5em !important;
+    }
+    .hb {
+        width: 35px;
+        height: 35px;
+    }
+    .logo {
+        height: 3em;
+    }
+    .logo img {
+        height: 3em;
+    }
+    .section-one-title h1 {
+        font-size: 42px !important;
+    }
+    .to-top {
+        padding: .5em .8em;
+    }
+    .our-speciallization-articles {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    .pricing-plan-price h2 {
+        font-size: 42px !important;
+    }
+    .section-one div {
+        padding-top: 2em;
     }
 }

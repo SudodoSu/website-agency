@@ -5,7 +5,8 @@ import { useState, useEffect } from "react";
 
 function Header() {
   const [scrolled, setScrolled] = useState(false);
-  const [hamburgerColor, setHamburgerColor] = useState("freeze");
+  const [hamburgerColor, setHamburgerColor] = useState("#F9F7F7");
+  const [handleClick, setClicked] = useState(false);
 
   function HandleScroll() {
     if (window.scrollY > 0) {
@@ -15,6 +16,10 @@ function Header() {
       setScrolled(false);
       setHamburgerColor("#F9F7F7");
     }
+  }
+
+  function handleNav() {
+    setClicked((event) => !event);
   }
 
   useEffect(() => {
@@ -27,7 +32,7 @@ function Header() {
 
   return (
     <header className={scrolled ? "scrolled" : ""}>
-      <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
+      <nav className={`max-width navbar ${scrolled ? "scrolled" : ""}`}>
         {!scrolled && (
           <a href="/" className="logo">
             <img
@@ -46,7 +51,7 @@ function Header() {
             />
           </a>
         )}
-        <ul className="navbar-lista">
+        <ul className={`navbar-lista ${handleClick ? "activeState" : ""}`}>
           <li>
             <a href="/" className={`nav-a ${scrolled ? "scrolled" : ""}`}>
               Početna
@@ -70,6 +75,7 @@ function Header() {
           </button>
         </ul>
         <svg
+          onClick={handleNav}
           className="hb"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 10 10"

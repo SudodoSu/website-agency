@@ -17,14 +17,15 @@ function Article({ articles, background, hover }) {
             <img src={hover(article.num) ? article.imgOrange : article.img} />
           </div>
           <div className="our-speciallization-articles-title">
-            <h2>{article.title}</h2>
-            <p>{article.des}</p>
+            <h2 className={` ${hover(article.num) ? "hoverState" : ""}`}>
+              {article.title}
+            </h2>
             <button
               className={`our-speciallization-articles-title > button ${
                 hover(article.num) ? "backgroundHover" : ""
               }`}
             >
-              <a href="/services">
+              <a href={article.path}>
                 <FontAwesomeIcon
                   icon={faChevronRight}
                   style={{

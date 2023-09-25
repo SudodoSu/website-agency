@@ -6,7 +6,7 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 function SectionThree() {
   return (
     <section className="section-three">
-      <div className="flex max-width">
+      <div className="content flex max-width">
         <div className="section-three-img">
           <img src={OurAgency} />
         </div>
@@ -26,23 +26,21 @@ function SectionThree() {
               Svaki projekt za nas je prilika za izražavanje kreativnosti i
               postizanje vaših ciljeva. Naš cilj je pružiti podršku i stručno
               vođenje kroz cijeli proces kako biste postigli online uspjeh.
-              <br />
-              <br />
-              Pogledajte naše usluge i projekte da biste saznali više o našem
-              radu i kontaktirajte nas kako bismo zajedno ostvarili vaše
-              digitalne ambicije. Vaša online prisutnost, uključujući i
-              održavanje web stranica, je naša briga.
             </p>
             <button>
-              Besplatne Konzultacije{" "}
-              <FontAwesomeIcon
-                icon={faArrowRight}
-                style={{ color: "#F9F7F7" }}
-              />
+              <a href="/contact">
+                Besplatne Konzultacije{" "}
+                <FontAwesomeIcon
+                  icon={faArrowRight}
+                  style={{ color: "#F9F7F7" }}
+                />
+              </a>
             </button>
           </div>
         </div>
       </div>
+      <div className="blur-div-blue"></div>
+      <div className="blur-div-yellow"></div>
     </section>
   );
 }

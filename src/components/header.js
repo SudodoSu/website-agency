@@ -77,6 +77,16 @@ function Header() {
             />
           </a>
         )}
+
+        {handleClick && (
+          <a className="logo">
+            <img
+              src={DarkLogo}
+              alt="logo boost web"
+              className={`nav-logo ${handleClick ? "sidebar" : ""}`}
+            />
+          </a>
+        )}
         <ul className={`navbar-lista ${handleClick ? "activeState" : ""}`}>
           <li>
             <a href="/" className={`nav-a ${scrolled ? "scrolled" : ""}`}>
@@ -93,16 +103,16 @@ function Header() {
             {servicesNavigation && (
               <ul ref={navRef} className="services-navigation">
                 <li>
-                  <a>Web Design</a>
+                  <a href="/web-design">Web Dizajn</a>
                 </li>
                 <li>
-                  <a>Web Development</a>
+                  <a href="/web-design">Web Development</a>
                 </li>
                 <li>
-                  <a>SEO Optimization</a>
+                  <a href="/web-design">SEO Optimization</a>
                 </li>
                 <li>
-                  <a>Poslovna Rješenja</a>
+                  <a href="/web-design">Poslovna Rješenja</a>
                 </li>
               </ul>
             )}
@@ -111,9 +121,7 @@ function Header() {
             <a className={`nav-a ${scrolled ? "scrolled" : ""}`}>Reference</a>
           </li>
           <button className="button-class" type="button">
-            <a href="/contact">
-              Besplatne Konzultacije <span>zakaži odmah!</span>
-            </a>
+            <a href="/contact">Besplatne Konzultacije</a>
           </button>
         </ul>
         <svg

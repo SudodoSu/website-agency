@@ -12,6 +12,9 @@ function SectionOne() {
             korisnike zahvaljujući njihovom jedinstvenom dizajnu i
             funkcionalnosti.
           </p>
+          <button>
+            <a href="/contact">Lansiraj Stranicu</a>
+          </button>
         </div>
         <div className="section-one-compimg">
           <img src={CompImg} />

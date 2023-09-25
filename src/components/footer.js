@@ -79,7 +79,7 @@ function Footer() {
                 icon={faChevronRight}
                 style={{ color: "#F9F7F7" }}
               />
-              <a href="/contact-us">Zatraži ponudu</a>
+              <a href="/contact">Zatraži ponudu</a>
             </li>
             <li onMouseEnter={() => onHover(7)} onMouseLeave={HoverLeave}>
               <FontAwesomeIcon
@@ -87,7 +87,7 @@ function Footer() {
                 icon={faChevronRight}
                 style={{ color: "#F9F7F7" }}
               />
-              <a href="/contact-us">Kontaktiraj nas</a>
+              <a href="/contact">Kontaktiraj nas</a>
             </li>
           </ul>
         </div>

@@ -1,12 +1,17 @@
 import "../App.css";
 import Logo from "../assets/images/logo-min2.png";
 import DarkLogo from "../assets/images/dark-logo.png";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 
 function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [hamburgerColor, setHamburgerColor] = useState("#F9F7F7");
   const [handleClick, setClicked] = useState(false);
+  const [servicesNavigation, setServicesNavigation] = useState(false);
+  const navRef = useRef(null);
 
   function HandleScroll() {
     if (window.scrollY > 0) {
@@ -20,6 +25,27 @@ function Header() {
 
   function handleNav() {
     setClicked((event) => !event);
+  }
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (navRef.current && !navRef.current.contains(event.target)) {
+        setServicesNavigation((event) => !event);
+      }
+    };
+
+    if (servicesNavigation) {
+      document.addEventListener("click", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, [servicesNavigation]);
+
+  function handleServicesNavigation(event) {
+    event.stopPropagation();
+    setServicesNavigation((event) => !event);
   }
 
   useEffect(() => {
@@ -59,11 +85,27 @@ function Header() {
           </li>
           <li>
             <a
-              href="/services"
-              className={`nav-a ${scrolled ? "scrolled" : ""}`}
+              onClick={handleServicesNavigation}
+              className={`services-nav nav-a ${scrolled ? "scrolled" : ""}`}
             >
-              Services
+              Usluge <FontAwesomeIcon icon={faCaretDown} />
             </a>
+            {servicesNavigation && (
+              <ul ref={navRef} className="services-navigation">
+                <li>
+                  <a>Web Design</a>
+                </li>
+                <li>
+                  <a>Web Development</a>
+                </li>
+                <li>
+                  <a>SEO Optimization</a>
+                </li>
+                <li>
+                  <a>Poslovna Rješenja</a>
+                </li>
+              </ul>
+            )}
           </li>
           <li>
             <a className={`nav-a ${scrolled ? "scrolled" : ""}`}>Reference</a>

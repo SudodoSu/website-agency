@@ -23,7 +23,7 @@ export const ContactUs = () => {
 
     setTimeout(() => {
       setMessageSent(false);
-    }, 3000);
+    }, 5000);
 
     emailjs
       .sendForm(
@@ -63,7 +63,7 @@ export const ContactUs = () => {
       <Header />
       <FristSection title="Contact Us" />
 
-      <main className="contact-us">
+      <main className="contact-us max-width">
         <div className="contact-us-image">
           <img src={ContactImage} />
         </div>

@@ -1,10 +1,18 @@
-import "../App.css";
-import Research from "../assets/images/research.png";
-import WebDevelopment from "../assets/images/webdevelopment.png";
 import WebSolutions from "../assets/images/web-solutions.png";
-import ResearchO from "../assets/images/research-orange.png";
-import WebDevelopmentO from "../assets/images/webdevelopment-orange.png";
 import WebSolutionsO from "../assets/images/web-solutions-orange.png";
+import SEOblue from "../assets/images/seo-blue.png";
+import SEOorange from "../assets/images/seo-orange.png";
+import SocialMediaBlue from "../assets/images/social-media-blue.png";
+import SocialMediaOrange from "../assets/images/social-media-orange.png";
+import ResponsiveBlue from "../assets/images/responsive-blue.png";
+import ResponsiveOrange from "../assets/images/responsive-orange.png";
+import GalleryBlue from "../assets/images/gallery-blue.png";
+import GalleryOrange from "../assets/images/gallery-orange.png";
+import MapsBlue from "../assets/images/maps-blue.png";
+import MapsOrange from "../assets/images/maps-orange.png";
+import BusinessBlue from "../assets/images/business-blue.png";
+import BusinessOrange from "../assets/images/business-orange.png";
+
 import { useState } from "react";
 import Article from "./section-two/article";
 
@@ -12,59 +20,52 @@ function SectionTwo() {
   const article = [
     {
       num: 1,
-      img: Research,
-      imgOrange: ResearchO,
+      img: WebSolutions,
+      imgOrange: WebSolutionsO,
       title: "Dizajn i izrada web stranice",
-      path: "/",
+      path: "/design",
     },
     {
       num: 2,
-      img: WebDevelopment,
-      imgOrange: WebDevelopmentO,
+      img: SEOblue,
+      imgOrange: SEOorange,
       title: "Optimizacija za tražilice",
-      path: "/",
+      path: "/seo",
     },
     {
       num: 3,
-      img: Research,
-      imgOrange: ResearchO,
+      img: ResponsiveBlue,
+      imgOrange: ResponsiveOrange,
       title: "Responsivni dizajn",
-      path: "/",
+      path: "/responsive",
     },
     {
       num: 4,
-      img: WebSolutions,
-      imgOrange: WebSolutionsO,
-      title: "Najbolje performanse",
-      path: "/",
+      img: GalleryBlue,
+      imgOrange: GalleryOrange,
+      title: "Interakcija galerija",
+      path: "/gallery",
     },
     {
       num: 5,
-      img: WebSolutions,
-      imgOrange: WebSolutionsO,
-      title: "Interakcija galerija",
-      path: "/",
+      img: SocialMediaBlue,
+      imgOrange: SocialMediaOrange,
+      title: "Interakcija društvenih mreža",
+      path: "/social",
     },
     {
       num: 6,
-      img: WebSolutions,
-      imgOrange: WebSolutionsO,
-      title: "Interakcija društvenih mreža",
-      path: "/",
+      img: MapsBlue,
+      imgOrange: MapsOrange,
+      title: "Google Maps & Business",
+      path: "/google-maps",
     },
     {
       num: 7,
-      img: WebSolutions,
-      imgOrange: WebSolutionsO,
-      title: "Google Maps & Business",
-      path: "/",
-    },
-    {
-      num: 8,
-      img: WebSolutions,
-      imgOrange: WebSolutionsO,
+      img: BusinessBlue,
+      imgOrange: BusinessOrange,
       title: "Poslovna rješenja",
-      path: "/",
+      path: "/business-solutions",
     },
   ];
 

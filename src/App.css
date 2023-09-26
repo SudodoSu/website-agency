@@ -105,7 +105,7 @@ body {
     border-radius: 100%;
     position: absolute;
     filter: blur(290px);
-    z-index: -10;
+    z-index: -100;
 }
 
 .blur-div-blue {
@@ -541,6 +541,7 @@ header nav ul li a.scrolled:before, header nav ul li a.scrolled:after {
     border-radius: 50px;
 }
 
+
 .our-speciallization-articles-image > img {
     max-width: 50%;
 }
@@ -661,6 +662,7 @@ header nav ul li a.scrolled:before, header nav ul li a.scrolled:after {
     align-items: center;
     flex-basis: 80px;
     box-shadow: 0 2px 15px rgba(251, 133, 0, 0.5);
+    overflow-y: hidden;
 }
 
 .section-four-inner-articles {

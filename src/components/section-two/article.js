@@ -13,9 +13,11 @@ function Article({ articles, background, hover }) {
           }`}
           onMouseEnter={() => background(article.num)}
         >
-          <div className="our-speciallization-articles-image">
-            <img src={hover(article.num) ? article.imgOrange : article.img} />
-          </div>
+          <a href={article.path}>
+            <div className="our-speciallization-articles-image">
+              <img src={hover(article.num) ? article.imgOrange : article.img} />
+            </div>
+          </a>
           <div className="our-speciallization-articles-title">
             <h2 className={` ${hover(article.num) ? "hoverState" : ""}`}>
               {article.title}

@@ -69,7 +69,7 @@ function Header() {
           </a>
         )}
         {scrolled && (
-          <a className="logo">
+          <a href="/" className="logo">
             <img
               src={DarkLogo}
               alt="logo boost web"
@@ -118,7 +118,12 @@ function Header() {
             )}
           </li>
           <li>
-            <a className={`nav-a ${scrolled ? "scrolled" : ""}`}>Reference</a>
+            <a
+              href="/reference"
+              className={`nav-a ${scrolled ? "scrolled" : ""}`}
+            >
+              Reference
+            </a>
           </li>
           <button className="button-class" type="button">
             <a href="/contact">Besplatne Konzultacije</a>

@@ -71,7 +71,7 @@ function Footer() {
                 icon={faChevronRight}
                 style={{ color: "#F9F7F7" }}
               />
-              <a href="/home">O nama</a>
+              <a href="/">O nama</a>
             </li>
             <li onMouseEnter={() => onHover(6)} onMouseLeave={HoverLeave}>
               <FontAwesomeIcon

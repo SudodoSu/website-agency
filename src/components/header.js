@@ -103,16 +103,25 @@ function Header() {
             {servicesNavigation && (
               <ul ref={navRef} className="services-navigation">
                 <li>
-                  <a href="/web-design">Web Dizajn</a>
+                  <a href="/design">Izrada i dizajn web stranica</a>
                 </li>
                 <li>
-                  <a href="/web-design">Web Development</a>
+                  <a href="/seo">Optimizacija za tražilice - SEO</a>
                 </li>
                 <li>
-                  <a href="/web-design">SEO Optimization</a>
+                  <a href="/responsive">Responsivni dizajn</a>
                 </li>
                 <li>
-                  <a href="/web-design">Poslovna Rješenja</a>
+                  <a href="/gallery">Obrada slike i galerije</a>
+                </li>
+                <li>
+                  <a href="/social">Itegracija društvenih mreža</a>
+                </li>
+                <li>
+                  <a href="/google'maps">Google maps i business</a>
+                </li>
+                <li>
+                  <a href="/business-solutions">Poslovna riješenja</a>
                 </li>
               </ul>
             )}

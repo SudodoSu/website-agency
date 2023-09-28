@@ -221,10 +221,11 @@ header.scrolled {
     box-shadow: var(--shadow);
     padding-top: .5em;
     padding-bottom: .5em;
+    margin-top: 1em;
     display: flex;
     flex-direction: column;
-    top: 4em;
     z-index: 6;
+    border-radius: 10px;
 }
 
 .services-navigation li {
@@ -1391,8 +1392,9 @@ footer {
         align-self: flex-start;
     }
     .services-navigation {
-        top: 11em;
-        left: 6em;
+        position: static;
+        gap: .5em;
+        font-size: .95em !important;
     }
     .services-navigation li {
         width: 100%;

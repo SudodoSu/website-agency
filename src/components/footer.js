@@ -19,7 +19,7 @@ function Footer() {
         <div className="footer-logo">
           <img src={LogoImg} />
           <p>
-            Ovdje smo da ti pružimo sve što trebaš za ostvariti uspješnu online
+            Ovdje smo da ti pružimo sve što trebaš za uspješnu online
             prisutnost.
           </p>
         </div>

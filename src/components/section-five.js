@@ -2,11 +2,7 @@ import "../App.css";
 import ClientCard from "./clients/clinet-card";
 import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faCircle,
-  faChevronRight,
-  faChevronLeft,
-} from "@fortawesome/free-solid-svg-icons";
+import { faCircle } from "@fortawesome/free-solid-svg-icons";
 
 function ClientWords() {
   const [activeIndex, setIndex] = useState(0);
@@ -74,6 +70,7 @@ function ClientWords() {
                       key={index}
                       className={`dot ${activeIndex === index ? "active" : ""}`}
                       icon={faCircle}
+                      size="2xs"
                       style={{ color: "#112D4E" }}
                     />
                   );

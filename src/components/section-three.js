@@ -40,7 +40,6 @@ function SectionThree() {
         </div>
       </div>
       <div className="blur-div-blue"></div>
-      <div className="blur-div-yellow"></div>
     </section>
   );
 }

@@ -1,0 +1,33 @@
+.responsive {
+    padding: 5em 0;
+}
+
+.responsive > div {
+    display: flex;
+    margin: auto;
+
+}
+
+.responsive > div > div {
+    flex: 1;
+}
+
+.responsive-image img {
+    width: 70%;
+    display: block;
+    animation: image_animation 4s linear infinite; 
+    margin: auto;
+}
+
+.responsive-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+}
+
+.responsive-content > div > h2 {
+    color: var(--blue);
+    margin-bottom: .5em;
+    font-family: SourceSansPro400, sans-serif;
+    
+}

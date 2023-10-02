@@ -3,6 +3,7 @@ import Header from "../header";
 import Footer from "../footer";
 import FristSection from "../first-section";
 import seoImg from "../../assets/images/seo-img.png";
+import seoMonitorAds from "../../assets/images/seo-monitor-ads.png";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSquareCheck } from "@fortawesome/free-solid-svg-icons";
@@ -50,7 +51,7 @@ function SEO() {
         <section className="seo-section-two">
           <div className="max-width">
             <div className="seo-image-two">
-              <img src={seoImg} />
+              <img src={seoMonitorAds} />
             </div>
             <div className="seo-content-two">
               <p>

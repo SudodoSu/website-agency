@@ -28,13 +28,13 @@
     width: 70%;
     display: block;
     margin: auto;
+    animation: image_animation 4s linear infinite;
 }
 
 
 
 
 .seo-section-two {
-    padding: 5em 0;
     background-color: var(--dark_blue);
 }
 
@@ -54,12 +54,21 @@
 
 .seo-content-two > p {
     color: var(--white);
+    padding: 5em 0;
+}
+
+.seo-image-two {
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: relative;
 }
 
 .seo-image-two img{
-    width: 40%;
-    display: block;
-    margin: auto;
+    width: 60%;
+    position: relative;
+    bottom: -1.5em;
 }
 
 
@@ -106,6 +115,13 @@
     margin: auto;
 }
 
+
+@media (max-width: 1200px) {
+    .seo-image-two img{
+        width: 70%;
+    }
+}
+
 @media (max-width: 1000px) {
     .seo-section > div,
     .seo-section-two > div,
@@ -115,5 +131,8 @@
     }
     .seo-articles {
         width: 100%;
+    }
+    .seo-image-two img{
+        width: 50%;
     }
 }

@@ -1,0 +1,102 @@
+.social {
+    padding: 5em 0;
+}
+
+.social > div {
+    margin: auto;
+    display: block;
+    text-align: center;
+}
+
+h2 {
+    color: var(--blue);
+    margin-bottom:1em;
+    font-family: SourceSansPro400, sans-serif;
+    font-size: 2rem;
+}
+
+
+
+.social-two {
+    background-image: var(--gradient3);
+    padding: 3em;
+}
+
+.social-two > div {
+    margin: auto;
+}
+
+.social-two-images {
+    display: flex;
+    justify-content: center;
+}
+
+.social-two-images div img {
+    width: 50%;
+    margin: auto;
+    display: block;
+}
+
+.social-three {
+    padding: 5em 0;
+}
+
+.social-three > div {
+    margin: auto;
+}
+
+.social-three-title {
+    text-align: center;
+}
+
+.social-bellow-content {
+    display: flex;
+    gap: 1em;
+}
+
+.social-bellow-content > div {
+    flex: 1;
+}
+
+.social-bellow-content-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.social-bellow-content-text > div {
+    display: flex;
+    gap: 1em;
+}
+
+.social-bellow-image img {
+    display: block;
+    margin: auto;
+}
+
+@media (max-width: 1000px) {
+    
+.social-bellow-content {
+    flex-direction: column;
+}
+.social-two-images div img {
+    width: 80%;
+}
+}
+
+
+@media (max-width: 500px) {
+    
+    .social-two-images div img {
+        width: 100%;
+    }
+
+    .social-two-images {
+        display: flex;
+        gap: 5px;
+    }
+    .social-bellow-content-text > div {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    }

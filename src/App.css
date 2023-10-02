@@ -578,6 +578,7 @@ header nav ul li a.scrolled:before, header nav ul li a.scrolled:after {
     align-items: center;
     justify-content: center;
     padding-bottom: 5em;
+    padding-top: 5em;
     position: relative;
 }
 
@@ -1488,6 +1489,7 @@ footer {
 }
 .faq-section-bottom {
     flex-direction: column;
+    gap: 1em;
 }
 } 
 

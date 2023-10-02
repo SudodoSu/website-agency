@@ -1,0 +1,39 @@
+.gallery {
+    padding: 5em 0;
+}
+
+.gallery > div {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+}
+
+.gallery > div > div {
+    display: flex;
+    gap: 1em;
+}
+
+
+.gallery-up-conten {
+    flex: 1;
+}
+
+
+.gallery-up-img {
+    flex: 0 0 20%;
+}
+
+@media (max-width: 500px) {
+    .gallery > div > div {
+        flex-direction: column;
+    }
+    .gallery-up-img img {
+        width: 50%;
+        display: block;
+        margin: auto;
+    }
+    .gallery-up-content{
+        text-align: center;
+    }
+}

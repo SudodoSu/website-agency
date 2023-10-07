@@ -15,7 +15,7 @@ function Article({ articles, background, hover }) {
         >
           <a href={article.path}>
             <div className="our-speciallization-articles-image">
-              <img src={hover(article.num) ? article.imgOrange : article.img} />
+              <img src={article.img} />
             </div>
           </a>
           <div className="our-speciallization-articles-title">

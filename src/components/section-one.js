@@ -12,9 +12,14 @@ function SectionOne() {
             korisnike zahvaljujući njihovom jedinstvenom dizajnu i
             funkcionalnosti.
           </p>
-          <button>
-            <a href="/contact">Lansiraj Stranicu</a>
-          </button>
+          <div className="section-one-buttons">
+            <button className="usluge-button">
+              <a href="#usluge">Saznaj Više</a>
+            </button>
+            <button>
+              <a href="/contact">Lansiraj Stranicu</a>
+            </button>
+          </div>
         </div>
         <div className="section-one-compimg">
           <img src={CompImg} />

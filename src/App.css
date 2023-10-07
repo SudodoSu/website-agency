@@ -417,7 +417,12 @@ header nav ul li a.scrolled:before, header nav ul li a.scrolled:after {
     width: 50%;
 }
 
-.section-one-title > button {
+.section-one-buttons {
+    display: flex;
+    gap: 5%;
+}
+
+.section-one-buttons > button {
     display: inline-block;
     width: 10em;
     background-image: var(--gradient2);
@@ -430,18 +435,27 @@ header nav ul li a.scrolled:before, header nav ul li a.scrolled:after {
     position: relative;
     height: 3rem;
 }
-.section-one-title > button:hover {
+.section-one-buttons > button:hover {
     border-radius: 20px 0;
     transition: all 0.5s;
 }
 
-.section-one-title > button > a {
+.section-one-buttons > button > a {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     height: 100%;
     color: var(--white);
+}
+.section-one-buttons > button.usluge-button {
+    background-image: none;
+    border: 2px solid var(--orange);
+}
+
+.section-one-buttons > button.usluge-button:hover {
+    background-image: var(--gradient2);
+    border: none;
 }
 
 /* Section Two */
@@ -511,10 +525,10 @@ header nav ul li a.scrolled:before, header nav ul li a.scrolled:after {
     flex-direction: column;
     gap: 0em;
     border-radius: 5px;
-    border-bottom: 1px solid rgba(0,0,0,.175);
-    border-left: 1px solid rgba(0,0,0,.035);
-    border-right: 1px solid rgba(0,0,0,.035);
-    padding: 1em;
+    border-bottom: 1px solid rgba(0,0,0,.2);
+    border-left: 1px solid rgba(0,0,0,.05);
+    border-right: 1px solid rgba(0,0,0,.05);
+    padding-bottom: 1em;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -529,7 +543,7 @@ header nav ul li a.scrolled:before, header nav ul li a.scrolled:after {
     text-align: center;
     display: flex;
     flex-direction: column;
-    gap: 2em;
+    gap: 1em;
     justify-content: center;
     align-items: center;
 }
@@ -537,6 +551,7 @@ header nav ul li a.scrolled:before, header nav ul li a.scrolled:after {
 .our-speciallization-articles-title h2  {
     font-size: 1.4rem;
     color: var(--blue);
+    margin: 0;
 }
 .our-speciallization-articles-title h2.hoverState {
     color: var(--dark_blue);

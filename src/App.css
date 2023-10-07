@@ -1559,6 +1559,10 @@ footer {
     display: block;
     margin: auto;
 }
+.iconAnimation {
+    animation: none;
+}
+
 } 
  
 

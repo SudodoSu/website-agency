@@ -118,7 +118,7 @@ function Header() {
                   <a href="/social">Itegracija društvenih mreža</a>
                 </li>
                 <li>
-                  <a href="/google'maps">Google maps i business</a>
+                  <a href="/google-maps">Google maps i business</a>
                 </li>
                 <li>
                   <a href="/business-solutions">Poslovna riješenja</a>

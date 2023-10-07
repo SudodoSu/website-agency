@@ -31,3 +31,11 @@
     font-family: SourceSansPro400, sans-serif;
     
 }
+
+@media (max-width: 1000px) {
+ 
+    .responsive > div {
+        flex-direction: column;
+        gap: 1em;
+    }   
+    }

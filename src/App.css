@@ -48,6 +48,10 @@
 
     /* Shadow */
     --shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    /* Fonts */
+
+    --section-one-subtitles: 40px;
 }
 
 *,
@@ -451,7 +455,7 @@ header nav ul li a.scrolled:before, header nav ul li a.scrolled:after {
 }
 
 .section-two h1 {
-    font-size: 3rem;
+    font-size: var(--section-one-subtitles);
 }
 
 .section-two-title {
@@ -590,7 +594,7 @@ header nav ul li a.scrolled:before, header nav ul li a.scrolled:after {
 }
 
 .section-three-title > h1 {
-    font-size: 3em;
+    font-size: var(--section-one-subtitles);
     font-family: SourceSansPro700, sans-serif;
     color: var(--dark_blue);
 }
@@ -649,7 +653,7 @@ header nav ul li a.scrolled:before, header nav ul li a.scrolled:after {
 }
 
 .section-four-title > h1 {
-    font-size: 3em;
+    font-size: var(--section-one-subtitles);
     font-family: SourceSansPro700, sans-serif;
     color: var(--dark_blue);
 }
@@ -743,7 +747,7 @@ header nav ul li a.scrolled:before, header nav ul li a.scrolled:after {
 }
 
 .pricing-title > h1 {
-    font-size: 3em;
+    font-size: var(--section-one-subtitles);
     color: var(--dark_blue);
 }
 
@@ -956,7 +960,7 @@ footer {
 }
 
 .clients-title h1 {
-    font-size: 3em;
+    font-size: var(--section-one-subtitles);
     color: var(--dark_blue);
 }
 
@@ -1270,7 +1274,7 @@ footer {
 }
 
 .faq-section-title  h1 {
-    font-size: 3em;
+    font-size: var(--section-one-subtitles);
     color: var(--white) !important;
 }
 

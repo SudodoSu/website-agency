@@ -1491,6 +1491,13 @@ footer {
     flex-direction: column;
     gap: 1em;
 }
+.section-one {
+    background-position: left;
+    height: 700px;
+}
+.section-one:after {
+    background-size: 150%;
+}
 } 
 
 /* Width 788px */
@@ -1599,6 +1606,10 @@ footer {
 }
 .first-section-path h4 {
     font-size: .8em;
+}
+.section-one {
+    padding: 10em 0;
+    height: 800px;
 }
 }
 

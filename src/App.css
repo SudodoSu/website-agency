@@ -529,12 +529,12 @@ header nav ul li a.scrolled:before, header nav ul li a.scrolled:after {
     border-left: 1px solid rgba(0,0,0,.05);
     border-right: 1px solid rgba(0,0,0,.05);
     padding-bottom: 1em;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .our-speciallization-articles > article.growArticle {
-    transform: translateY(-.5em);
-    transition: transform 0.3s, box-shadow 0.3s;
+    transform: translateY(-1em);
+    transition: transform 0.2s, box-shadow 0.2s;
     box-shadow: var(--shadow);
 }
 
